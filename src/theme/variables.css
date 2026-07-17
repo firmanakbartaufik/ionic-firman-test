@@ -1,0 +1,214 @@
+:root {
+  --app-primary: #6366f1;
+  --app-primary-dark: #4f46e5;
+  --app-primary-light: #818cf8;
+  --app-secondary: #06b6d4;
+  --app-accent: #f59e0b;
+  --app-success: #10b981;
+  --app-danger: #ef4444;
+  --app-warning: #f59e0b;
+  --app-bg-start: #667eea;
+  --app-bg-end: #764ba2;
+  --app-card-shadow: 0 8px 32px rgba(99, 102, 241, 0.15);
+  --app-card-shadow-hover: 0 12px 40px rgba(99, 102, 241, 0.25);
+  --app-gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --app-gradient-warm: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --app-gradient-cool: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --app-gradient-sunset: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  --app-gradient-success: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  --app-border-radius: 16px;
+  --app-border-radius-sm: 10px;
+  --app-border-radius-lg: 24px;
+}
+
+ion-content {
+  --background: #f0f2f9;
+}
+
+ion-card {
+  border-radius: var(--app-border-radius) !important;
+  box-shadow: var(--app-card-shadow) !important;
+  border: none !important;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ion-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--app-card-shadow-hover) !important;
+}
+
+ion-button {
+  --border-radius: var(--app-border-radius-sm) !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: none;
+  transition: all 0.3s ease;
+}
+
+ion-button[expand="block"] {
+  height: 48px;
+}
+
+ion-input, ion-textarea {
+  --border-radius: var(--app-border-radius-sm) !important;
+  --background: rgba(99, 102, 241, 0.04);
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --highlight-color-valid: var(--app-success);
+  --highlight-color-invalid: var(--app-danger);
+  border: 1.5px solid rgba(99, 102, 241, 0.12);
+  border-radius: var(--app-border-radius-sm) !important;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+ion-input:focus-within, ion-textarea:focus-within {
+  border-color: var(--app-primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+ion-item {
+  --border-radius: var(--app-border-radius-sm) !important;
+  --min-height: 52px;
+  transition: background 0.2s ease;
+}
+
+ion-item:hover {
+  --background: rgba(99, 102, 241, 0.04);
+}
+
+ion-toolbar {
+  --color: white;
+}
+
+ion-list {
+  padding: 8px;
+}
+
+ion-menu ion-content {
+  --background: linear-gradient(180deg, #1e1b4b 0%, #312e81 100%);
+  --color: rgba(255, 255, 255, 0.85);
+}
+
+ion-menu ion-item {
+  --min-height: 52px;
+  --border-radius: 12px;
+  --color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 4px;
+}
+
+ion-menu ion-item:hover {
+  --background: rgba(255, 255, 255, 0.1);
+  --color: white;
+}
+
+ion-menu ion-item ion-icon {
+  color: var(--app-primary-light);
+}
+
+ion-searchbar {
+  --border-radius: var(--app-border-radius-sm) !important;
+  --box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  --background: white;
+}
+
+ion-modal {
+  --border-radius: var(--app-border-radius) !important;
+  --box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+ion-alert {
+  --border-radius: var(--app-border-radius) !important;
+}
+
+ion-loading {
+  --border-radius: var(--app-border-radius) !important;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.animate-slide-in {
+  animation: slideInLeft 0.4s ease forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.stagger-1 { animation-delay: 0.1s; opacity: 0; }
+.stagger-2 { animation-delay: 0.2s; opacity: 0; }
+.stagger-3 { animation-delay: 0.3s; opacity: 0; }
+.stagger-4 { animation-delay: 0.4s; opacity: 0; }
+.stagger-5 { animation-delay: 0.5s; opacity: 0; }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --app-card-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --app-card-shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  ion-content {
+    --background: #0f0f23;
+  }
+
+  ion-card {
+    --background: #1a1a2e;
+  }
+
+  ion-input, ion-textarea {
+    --background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  ion-searchbar {
+    --background: #1a1a2e;
+  }
+}
